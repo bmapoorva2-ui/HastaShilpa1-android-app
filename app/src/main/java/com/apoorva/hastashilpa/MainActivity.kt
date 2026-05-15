@@ -43,6 +43,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import java.net.URLDecoder
 import java.net.URLEncoder
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
+
 
 // ─────────────────────────────────────────────
 //  THEME COLORS
@@ -62,6 +65,8 @@ val GreenSuccess    = Color(0xFF2E7D32)
 // ─────────────────────────────────────────────
 
 class MainActivity : ComponentActivity() {
+    val db = com.google.firebase.Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { HastaShilpaApp() }
